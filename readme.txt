@@ -1,17 +1,17 @@
 === Word Replacer ===
-Contributors: takien
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=BL7ERUY46HPL8&lc=ID&item_name=Word%20Replacer%20Plugin&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted
-Tags: replacer, post, comment, page, replace, censor, bbcode, filter
+Contributors: takien, Jan Kischel
+Donate link: http://takien.com/donate
+Tags: replacer, post, comment, page, replace, censor, bbcode, filter, bbpress
 Requires at least: 3.1
-Tested up to: 3.2.1
-Stable tag: 0.2.3
+Tested up to: 4.3.1
+Stable tag: 0.5
+License: GPLv2 or later
 
-Replace word in post, page, or comment.
+Replace word by another word in post, page, or comment. And... bbPress
 
 == Description ==
 
-Word Replacer is a Wordpress plugin to replace any texts or words with another. You can filter which content to be replaced, eg. only in page, comment, or post. With very userfriendly administration page you can manage list of word eaasily. It's also can be used to censor any bad words in your comments.
-
+Word Replacer is a Wordpress plugin to replace any texts or words with another. You can filter which content to be replaced, eg. only in page, comment, or post. With very userfriendly administration page you can manage list of word easily. It's also can be used to censor any bad words in your comments. And... bbPress :)
 
 = Features =
 1. With regex support.
@@ -27,12 +27,37 @@ The installation process.
 3. Go to Settings menu and you will see Word Replacer sub menu. 
 
 == Frequently Asked Questions ==
+-
 
 == Screenshots ==
 
 1. Settings page where you can add/remove your words.
 
 == Changelog ==
+
+= 0.5 = changes by Jan Kischel:
+* Improve: integrated code highlighting editor EditArea
+* Fixed: If used as code snippet engine, parts were cutted off (because of overflow:hidden)
+* Changed: Added element ID to <textarea> fields
+* Changed: The checkbox columns were taking very much white space. Now, they're taking less.
+* Changed: The textarea boxes now have a minimum and a maximum height to prevent them getting monstrously big.
+
+= 0.4 =
+* Fixed: Suppress error `PHP Warning:  Missing argument 2 for WordReplacer::word_replacer_comment()` if comment disabled.
+
+= 0.3.3 =
+* Fixed: If original word contains `[` or `]` and regex not checked cause loop replacement
+
+= 0.3.2 =
+* Fixed: error on WordPress 3.6 caused by deprecated function `$wpdb->escape`
+
+= 0.3.1 =
+* Fix typo
+
+= 0.3 =
+* Added: Now supported bbPress
+* Added: Option to strip backslash during update words ( if necessary )
+* Improved code
 
 = 0.2.3 =
 * Changed: now use Class.
