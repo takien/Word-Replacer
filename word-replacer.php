@@ -74,7 +74,7 @@ if (!class_exists('WordReplacer')) {
 		$sql = "CREATE TABLE " . $tablename . " (
 		  id mediumint(9) NOT NULL AUTO_INCREMENT,
 		  original TEXT NOT NULL,
-		  replacement TEXT NOT NULL,
+		  replacement MEDIUMTEXT NOT NULL,
 		  in_posts VARCHAR(3) NOT NULL,
 		  in_comments VARCHAR(3) NOT NULL,
 		  in_pages VARCHAR(3) NOT NULL,
